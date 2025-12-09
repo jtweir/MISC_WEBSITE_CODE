@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Wheel</title>
+</head>
+<body style="margin:0;">
+
+
+<svg
+  width="100%"
+  height="100%"
+viewBox="84.05 84.05 331.89 331.89"
+
+
+
+
+  xmlns="http://www.w3.org/2000/svg"
+  class="wheel-svg"
+>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+      .wheel-slice {
+        cursor: pointer;
+        font-family: 'Inter', sans-serif;
+      }
+
+/* an alternative colour pallete */
+      /*.slice-1 { fill: #FF6B6B; }
+      .slice-2 { fill: #FFA94D; }
+      .slice-3 { fill: #FFD43B; }
+      .slice-4 { fill: #69DB7C; }
+      .slice-5 { fill: #38D9A9; }
+      .slice-6 { fill: #4DABF7; }
+      .slice-7 { fill: #9775FA; }
+      .slice-8 { fill: #F783AC; } */
+
+
+  .slice-1 { fill: #9DAF58; }  /* Olive Green */
+  .slice-2 { fill: #E3B23C; }  /* Sunflower Yellow */
+  .slice-3 { fill: #E07F40; }  /* Golden Orange */
+  .slice-4 { fill: #D86852; }  /* Warm Coral */
+  .slice-5 { fill: #D1495B; }  /* Deep Cranberry Red */
+  .slice-6 { fill: #7C4B52; }  /* Brownish Cranberry */
+  .slice-7 { fill: #3B6E44; }  /* Forest Green */
+  .slice-8 { fill: #5C8A47; }  /* Dark Olive-Green */
+
+      text {
+        fill: white;
+        font-size: 15px;
+        font-weight: bold;
+        text-anchor: middle;
+        dominant-baseline: middle;
+        pointer-events: none;
+      }
+      path.arc-label {
+        fill: none;
+      }
+      tspan.subtitle {
+        font-size: 15px;
+        display: block;
+      }
+      .wheel-svg text {
+        letter-spacing: 0.07em; /* adjust value as needed */
+      }
+.wheel-slice {
+  pointer-events: all;
+  cursor: pointer;
+  stroke: transparent;
+  stroke-width: 2;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.wheel-slice:hover {
+  filter: brightness(1.2);
+  stroke: white;
+}
+
+
+    </style>
+  </defs>
+
+  <g transform="translate(250,250) rotate(-22.5)">
+    <!-- Each arc is now ~43� with 2� spacing -->
+ 
+  <a xlink:href="/research-areas">
+    <title>Research Areas</title>
+    <path d="M150.8,-53.41 A160,160 0 0,1 150.8,53.41 L75.41,26.7 A80,80 0 0,0 75.41,-26.7 Z"
+          class="wheel-slice slice-1" transform="rotate(22.5)" />
+  </a>
+  <a xlink:href="/facilities">
+    <title>Facilities</title>
+    <path d="M144.4,68.88 A160,160 0 0,1 68.88,144.4 L34.44,72.21 A80,80 0 0,0 72.21,34.44 Z"
+          class="wheel-slice slice-2" transform="rotate(22.5)" />
+  </a>
+  <a xlink:href="/admin">
+    <title>Admin & Staff</title>
+    <path d="M53.41,150.8 A160,160 0 0,1 -53.41,150.8 L-26.7,75.41 A80,80 0 0,0 26.7,75.41 Z"
+          class="wheel-slice slice-3" transform="rotate(22.5)" />
+  </a>
+  <a xlink:href="/programs">
+    <title>Programs</title>
+    <path d="M-68.88,144.4 A160,160 0 0,1 -144.4,68.88 L-72.21,34.44 A80,80 0 0,0 -34.44,72.21 Z"
+          class="wheel-slice slice-4" transform="rotate(22.5)" />
+  </a>
+  <a xlink:href="/postdocs">
+    <title>Postdocs & RAs</title>
+    <path d="M-150.8,53.41 A160,160 0 0,1 -150.8,-53.41 L-75.41,-26.7 A80,80 0 0,0 -75.41,26.7 Z"
+          class="wheel-slice slice-5" transform="rotate(22.5)" />
+  </a>
+  <a xlink:href="faculty">
+    <title>Explore Faculty</title>
+    <path d="M-144.4,-68.88 A160,160 0 0,1 -68.88,-144.4 L-34.44,-72.21 A80,80 0 0,0 -72.21,-34.44 Z"
+          class="wheel-slice slice-6" transform="rotate(22.5)" />
+  </a>
+  <a xlink:href="undergrad">
+    <title>Explore Undergrad</title>
+    <path d="M-53.41,-150.8 A160,160 0 0,1 53.41,-150.8 L26.7,-75.41 A80,80 0 0,0 -26.7,-75.41 Z"
+          class="wheel-slice slice-7" transform="rotate(22.5)" />
+  </a>
+  <a xlink:href="grad">
+    <title>Explore Grad</title>
+    <path d="M68.88,-144.4 A160,160 0 0,1 144.4,-68.88 L72.21,-34.44 A80,80 0 0,0 34.44,-72.21 Z"
+          class="wheel-slice slice-8" transform="rotate(22.5)" />
+  </a>
+
+
+    <!-- Donut hole -->
+    <circle cx="0" cy="0" r="80" fill="transparent" />
+
+    <!-- Arcs for curved labels (unchanged) -->
+
+   <defs>
+        <path id="arc1" d="M0,-135 A135,135 0 0,1 95,-95" class="arc-label" /> <!-- Normal -->
+        <path id="arc2" d="M95,-95 A135,135 0 0,1 135,0" class="arc-label" /> <!-- Normal -->
+        <path id="arc3" d="M135,0 A135,135 0 0,1 95,95" class="arc-label" /> <!-- Normal -->
+        <path id="arc4" d="M0,135 A135,135 0 0,0 95,95" class="arc-label" />  <!-- Flipped -->
+        <path id="arc5" d="M-95,95 A135,135 0 0,0 0,135" class="arc-label" />  <!-- Flipped -->
+        <path id="arc6" d="M-135,0 A135,135 0 0,0 -95,95" class="arc-label" /> <!-- Flipped -->
+        <path id="arc7" d="M-135,0 A135,135 0 0,1 -95,-95" class="arc-label" /> <!-- Normal -->
+        <path id="arc8" d="M-95,-95 A135,135 0 0,1 0,-135" class="arc-label" /> <!-- Normal -->
+    </defs>
+
+
+    <!-- Curved Text Labels (unchanged) -->
+    <a xlink:href="#"><text font-size="12"><textPath href="#arc1" startOffset="50%">Undergrad<tspan x="0" dy="18" class="subtitle"></tspan></textPath></text></a>
+    <a xlink:href="#"><text font-size="12"><textPath href="#arc2" startOffset="50%">Grad<tspan x="0" dy="18" class="subtitle"></tspan></textPath></text></a>
+    <a xlink:href="/research-areas"><text font-size="12"><textPath href="#arc3" startOffset="50%">Research<tspan x="0" dy="18" class="subtitle"></tspan></textPath></text></a>
+    <a xlink:href="#"><text font-size="12"><textPath href="#arc4" startOffset="50%">Facilities</textPath></text></a>
+    <a xlink:href="#"><text font-size="12" dy="0"><textPath href="#arc5" startOffset="50%">Admin<tspan x="0" dy="18" class="subtitle"></tspan></textPath></text></a>
+    <a xlink:href="#"><text font-size="12"><textPath href="#arc6" startOffset="50%">Programs</textPath></text></a>
+    <a xlink:href="#"><text font-size="12"><textPath href="#arc7" startOffset="50%">Postdocs<tspan x="0" dy="18" class="subtitle"></tspan></textPath></text></a>
+    <a xlink:href="#"><text font-size="12"><textPath href="#arc8" startOffset="50%">Faculty<tspan x="0" dy="18" class="subtitle"></tspan></textPath></text></a>
+  </g>
+</svg>
+
+</body>
+</html>
+
+
+
+
